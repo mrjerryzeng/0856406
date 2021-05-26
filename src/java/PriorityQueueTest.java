@@ -19,7 +19,10 @@ public class PriorityQueueTest {
                 arguments(new int[]{5,4,3,2,1},new int[] {1,2,3,4,5})
         );
     }
-
+    @ParameterizedTest(
+            name = "#{index} -Test with Argument={0},{1}"
+    )
+    @MethodSource({"stringIntAndListProvider"})
     public void PriorityQueue_RunTest(int [] random_array,int[] correct_array){
         PriorityQueue<Integer> test = new PriorityQueue<Integer>();
         int index = 0;
