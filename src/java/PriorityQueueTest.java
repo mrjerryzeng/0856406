@@ -36,20 +36,20 @@ public class PriorityQueueTest {
         assertArrayEquals(correct_array,result);
     }
 
-
+    @Test
     public void InitialCapacityTest(){
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             new PriorityQueue(-1, null);
         });
     }
-
+    @Test
     public void OfferTest(){
         Exception exception = assertThrows(NullPointerException.class, () ->{
             new PriorityQueue().offer(null);
         });
     }
 
-
+    @Test
     public void ForEachRemainingTest(){
         Exception exception = assertThrows(NullPointerException.class, () ->{
             new PriorityQueue().forEach(null);
